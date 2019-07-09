@@ -22,11 +22,11 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.ctrip.framework.apollo</groupId>
-            <artifactId>apollo-client</artifactId>
-            <version>${apollo.client.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.ctrip.framework.apollo</groupId>-->
+<!--            <artifactId>apollo-client</artifactId>-->
+<!--            <version>${apollo.client.version}</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -36,10 +36,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
@@ -60,11 +60,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>io.daocloud.mircoservice</groupId>
-            <artifactId>collector-client-starter-2x</artifactId>
-            <version>${collector-client.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.daocloud.mircoservice</groupId>-->
+<!--            <artifactId>collector-client-starter-2x</artifactId>-->
+<!--            <version>${collector-client.version}</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>

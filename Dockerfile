@@ -1,23 +1,13 @@
-FROM openjdk:8-jre-alpine
+FROM registry.dx.io/daocloud-dmp/vedfolnir-agent-sidecar:latest
 
-LABEL maintainer="jian.tan@daocloud.io"
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN echo 'Asia/Shanghai' >/etc/timezone
 
-ENV DIST_NAME=admin \
-    APP_VERSION=0.0.1-SNAPSHOT \
-    AGENT_REPO_URL="http://nexus.mschina.io/nexus/content/repositories/labs/org/apache/skywalking/dmp/agent/2.0.1/agent-2.0.1.gz"
+ENV AGENT_OPTS="-javaagnet:/skywalking/agent/skywalking-agent.jar -javaagent:/vedfolnir/vedfolnir-agent-1.0-SNAPSHOT.jar"
 
-ADD $AGENT_REPO_URL /
+WORKDIR /app
+ADD target/admin-0.0.1-SNAPSHOT.jar .
 
-COPY target/"$DIST_NAME-$APP_VERSION.jar" /"$DIST_NAME.jar"
+EXPOSE 8002
 
-RUN set -ex; \
-    tar -zxf /agent-2.0.1.gz; \
-    rm -rf agent-2.0.1.gz;
-    
-RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-    && echo "Asia/Shanghai" > /etc/timezone
-
-EXPOSE 18083
-
-ENTRYPOINT java  -javaagent:/skywalking-agent/skywalking-agent.jar \
-           -XX:+PrintFlagsFinal -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap $JAVA_OPTS -jar /$DIST_NAME.jar
+ENTRYPOINT java $AGENT_OPTS $JAVA_OPTS -jar admin-0.0.1-SNAPSHOT.jar

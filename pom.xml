@@ -94,17 +94,14 @@
 
     <repositories>
         <repository>
-            <id>labs-snapshots</id>
-            <url>http://nexus.mschina.io/nexus/content/repositories/labs-snapshot/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>https://maven.aliyun.com/repository/public</url>
         </repository>
         <repository>
-            <id>labs-releases</id>
-            <url>
-                http://nexus.mschina.io/nexus/content/repositories/labs/
-            </url>
+            <id>labs</id>
+            <name>labs</name>
+            <url>https://nexus.daocloud.io/repository/labs/</url>
         </repository>
     </repositories>
 </project>

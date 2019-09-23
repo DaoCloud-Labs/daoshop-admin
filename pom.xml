@@ -95,7 +95,7 @@
     <repositories>
         <repository>
             <id>labs-snapshots</id>
-            <url>https://nexus.daocloud.io/repository/labs-snapshot/</url>
+            <url>https://nexus.daocloud.io/repository/dx-public/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -103,7 +103,7 @@
         <repository>
             <id>labs-releases</id>
             <url>
-                https://nexus.daocloud.io/repository/labs/
+                https://nexus.daocloud.io/repository/dx-public/
             </url>
         </repository>
     </repositories>

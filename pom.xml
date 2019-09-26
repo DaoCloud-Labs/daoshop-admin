@@ -38,10 +38,6 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
@@ -69,6 +65,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -95,7 +92,7 @@
     <repositories>
         <repository>
             <id>labs-snapshots</id>
-            <url>https://nexus.daocloud.io/repository/dx-public/</url>
+            <url>https://nexus.daocloud.io/repository/maven-public/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -103,7 +100,7 @@
         <repository>
             <id>labs-releases</id>
             <url>
-                https://nexus.daocloud.io/repository/dx-public/
+                https://nexus.daocloud.io/repository/maven-public/
             </url>
         </repository>
     </repositories>

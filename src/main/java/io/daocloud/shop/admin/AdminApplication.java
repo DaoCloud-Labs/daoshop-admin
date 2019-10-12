@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@EnableApolloConfig
+@EnableApolloConfig({"application","public.application"})
 @EnableDaocloudDiscovery
 public class AdminApplication {
 

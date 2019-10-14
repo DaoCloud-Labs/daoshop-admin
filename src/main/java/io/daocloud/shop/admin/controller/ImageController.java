@@ -21,7 +21,7 @@ public class ImageController {
     @Value("#{'${daoshop.main.img:https://qiniu-download-public.daocloud.io/DaoCloud_MicroServices_Platform/dmp_logo.svg}'.split(',')}")
     private List<String> images;
     @GetMapping("/image/main")
-    private List<String> getImgUrl(){
+    public List<String> getImgUrl(){
         return images;
     }
 
